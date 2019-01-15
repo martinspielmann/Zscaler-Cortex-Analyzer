@@ -1,0 +1,62 @@
+{
+  "name": "Zscaler",
+  "author": "Simon Lavigne",
+  "license": "AGPL-V3",
+  "url": "https://github.com/",
+  "version": "1.2",
+  "description": "Check domain categorisation against Zscaler",
+  "dataTypeList": ["domain", "url", "fqdn"],
+  "baseConfig": "Zscaler",
+  "config": {
+      "check_tlp": true,
+      "max_tlp": 2,
+      "service" : "query"
+   },
+  "command": "Zscaler/zscaler_analyzer.py",
+  "configurationItems": [
+    {
+      "name": "username",
+      "description": "Zscaler username",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "password",
+      "description": "Zscaler password",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "api_key",
+      "description": "API key",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "base_uri",
+      "description": "The base URL of your Zscaler subscription",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "malicious_categories",
+      "description": "List of Zscaler categories to be considered as malicious",
+      "type": "string",
+      "multi": true,
+      "required": true,
+      "defaultValue": ["PHISHING", "MALWARE_SITE", "BOTNET", "SPYWARE_OR_ADWARE", "ADSPYWARE_SITES", "ADWARE_OR_SPYWARE", "CRYPTOMINING", "WEB_SPAM"]
+    },
+    {
+      "name": "suspicious_categories",
+      "description": "List of Zscaler categories to be considered as suspicious",
+      "type": "string",
+      "multi": true,
+      "required": true,
+      "defaultValue": ["SHAREWARE_DOWNLOAD", "REMOTE_ACCESS", "MISCELLANEOUS_OR_UNKNOWN", "NEWLY_REG_DOMAINS", "OTHER_ILLEGAL_OR_QUESTIONABLE", "COPYRIGHT_INFRINGEMENT", "GAMBLING", "COMPUTER_HACKING", "ANONYMIZER", "MISCELLANEOUS_OR_UNKNOWN"]
+    }
+  ]
+}
