@@ -2,9 +2,9 @@
   "name": "Zscaler",
   "author": "Simon Lavigne",
   "license": "AGPL-V3",
-  "url": "https://github.com/",
+  "url": "https://github.com/xg5-simon/Zscaler-Cortex-Analyzer",
   "version": "1.2",
-  "description": "Check domain categorisation against Zscaler",
+  "description": "Check domain categorisation against Zscaler. Requires ZIA API key.",
   "dataTypeList": ["domain", "url", "fqdn"],
   "baseConfig": "Zscaler",
   "config": {
