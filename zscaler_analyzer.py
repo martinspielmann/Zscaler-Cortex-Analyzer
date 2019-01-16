@@ -73,16 +73,16 @@ class ZscalerAnalyzer(Analyzer):
             now = str(long(time.time() * 1000))
             n = now[-6:]
             r = str(int(n) >> 1).zfill(6)
-            obsfucated_key = ""
+            obfuscated_key = ""
             for i in range(0, len(n), 1):
-                obsfucated_key += self.api_key[int(n[i])]
+                obfuscated_key += self.api_key[int(n[i])]
             for j in range(0, len(r), 1):
-                obsfucated_key += self.api_key[int(r[j])+2]
+                obfuscated_key += self.api_key[int(r[j])+2]
 
             payload = {
                 "username": self.username,
                 "password": self.password,
-                "apiKey": obsfucated_key,
+                "apiKey": obfuscated_key,
                 "timestamp": int(now)
             }
 
