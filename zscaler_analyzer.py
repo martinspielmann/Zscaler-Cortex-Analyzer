@@ -92,6 +92,7 @@ class ZscalerAnalyzer(Analyzer):
             url_to_query.append(data)
             r = session.post(self.base_uri + '/api/v1/authenticatedSession', headers=self.headers, json=payload)
             s = session.post(self.base_uri + '/api/v1/urlLookup', headers=self.headers, json=url_to_query)
+            s.close()
             response = s.json()
             self.report(response[0])
         else:
