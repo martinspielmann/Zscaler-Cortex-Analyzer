@@ -19,7 +19,9 @@ class ZscalerAnalyzer(Analyzer):
         self.password = self.get_param('config.password', None, 'Zscaler password is missing')
         self.headers = {
             'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'User-Agent': 'Cortex-Analyzer'
+
         }
 
     def summary(self, raw):
