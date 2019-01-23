@@ -4,8 +4,9 @@
   "license": "AGPL-V3",
   "url": "https://github.com/xg5-simon/Zscaler-Cortex-Analyzer",
   "version": "1.2",
-  "description": "Check domain categorisation against Zscaler. Requires ZIA API key.",
-  "dataTypeList": ["domain", "url", "fqdn"],
+  "description": "Check Zscaler category for a domain, fqdn, IP address or FQDN. This analyzer requires a paid subscription to Zscaler ZIA",
+  "dataTypeList": ["ip", "domain", "url", "fqdn"],
+
   "baseConfig": "Zscaler",
   "config": {
       "check_tlp": true,
