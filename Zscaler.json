@@ -6,7 +6,6 @@
   "version": "1.2",
   "description": "Check Zscaler category for a domain, fqdn, IP address or FQDN. This analyzer requires a paid subscription to Zscaler ZIA",
   "dataTypeList": ["ip", "domain", "url", "fqdn"],
-
   "baseConfig": "Zscaler",
   "config": {
       "check_tlp": true,
