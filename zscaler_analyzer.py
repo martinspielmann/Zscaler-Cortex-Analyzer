@@ -68,7 +68,7 @@ class ZscalerAnalyzer(Analyzer):
     def run(self):
         Analyzer.run(self)
 
-        if self.data_type == 'domain' or self.data_type == 'fqdn'  or self.data_type == 'ip' or self.data_type =='url':
+        if self.data_type == 'domain' or self.data_type == 'fqdn'  or self.data_type == 'ip':
             data = self.get_param('data', None, 'Data is missing')
 
             # Get JSESSIONID
