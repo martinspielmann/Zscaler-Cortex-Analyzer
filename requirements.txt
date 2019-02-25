@@ -1,2 +1,3 @@
 cortexutils
 urllib2
+requests
